@@ -1,0 +1,35 @@
+{
+  "name": "decidim-cfj-heroku",
+  "description": "decidim-cfj-heroku - Decidim App modified by Code for Japan",
+  "keywords": ["decidim"],
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "heroku-redis:hobby-dev",
+    "sendgrid:starter"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "scripts": {
+    "postdeploy":"rake db:schema:load db:migrate db:seed"
+  },
+  "env": {
+    "RUBY_VERSION": "2.6.10",
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Needed for review apps",
+      "required": false
+    },
+    "SECRET_KEY_BASE": {
+      "description": "A secret used by Rails to identify sessions",
+      "generator": "secret"
+    }
+  }
+}
