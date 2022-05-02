@@ -10,3 +10,5 @@ Decidim本家のリポジトリはこちらです。[Decidim](https://github.com
 - [開発環境の構築](/docs/DEVELOPMENT.md)
 - [デプロイについて](/docs/DEPLOYMENT.md)
 - [インフラについて](/docs/INFRA.md)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
