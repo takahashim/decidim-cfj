@@ -23,6 +23,12 @@
     "AWS_SECRET_ACCESS_KEY": {
       "required": true
     },
+    "AWS_BUCKET_NAME": {
+      "required": true
+    },
+    "AWS_CLOUD_FRONT_END_POINT": {
+      "required": false
+    },
     "HEROKU_APP_NAME": {
       "description": "Needed for review apps",
       "required": false
