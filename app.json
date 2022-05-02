@@ -13,7 +13,7 @@
     }
   ],
   "scripts": {
-    "postdeploy":"rake db:schema:load db:migrate db:seed"
+    "postdeploy":"rake db:schema:load db:migrate"
   },
   "env": {
     "RUBY_VERSION": "2.6.10",
