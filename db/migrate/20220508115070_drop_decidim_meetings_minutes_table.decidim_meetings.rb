@@ -23,6 +23,13 @@ class DropDecidimMeetingsMinutesTable < ActiveRecord::Migration[6.0]
       minutes = Minutes.find_by(id: action_log.resource_id)
       version = Version.find_by(id: action_log.version_id)
 
+      Rail.logger.info("action_log: #{action_log.inspect}")
+      Rail.logger.info("minutes: #{minutes.inspect}")
+      Rail.logger.info("version_id: #{version&.id}")
+
+      next unless minutes
+      next unless version
+
       version_updates = {
         item_type: "Decidim::Meetings::Meeting",
         item_id: minutes.decidim_meeting_id
