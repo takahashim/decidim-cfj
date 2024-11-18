@@ -29,11 +29,11 @@ GIT
 
 GIT
   remote: https://github.com/takahashim/decidim-polis.git
-  revision: 57742dc52570172d31eb9a6aa5e08ebfb821bec1
-  branch: update-0-28-3
+  revision: 0cdc060e7a2d47586a8ac1599b6d0612259a6b7d
+  branch: fix-0-28-0
   specs:
-    decidim-polis (0.28.3)
-      decidim-core (= 0.28.3)
+    decidim-polis (0.28.0)
+      decidim-core (~> 0.28.0)
 
 PATH
   remote: decidim-user_extension
